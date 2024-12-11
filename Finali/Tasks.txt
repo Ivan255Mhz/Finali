@@ -1,0 +1,799 @@
+[
+  {
+    "Id": 1,
+    "Title": "Разработка API",
+    "CreationDate": "2024-11-30T16:04:48.2074116+03:00",
+    "Deadline": "2024-12-07T16:04:48.2101306+03:00",
+    "Assignee": {
+      "Id": 1,
+      "Name": "Алексей",
+      "Position": 1,
+      "Login": "aleksey1",
+      "Password": "pass1",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "Id": 2,
+    "Title": "Создание UI",
+    "CreationDate": "2024-11-30T16:04:48.2102702+03:00",
+    "Deadline": "2024-12-10T16:04:48.2102705+03:00",
+    "Assignee": {
+      "Id": 2,
+      "Name": "Мария",
+      "Position": 0,
+      "Login": "maria1",
+      "Password": "pass2",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 2,
+    "SubTasks": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "Id": 3,
+    "Title": "Написание тестов",
+    "CreationDate": "2024-11-30T16:04:48.2102711+03:00",
+    "Deadline": "2024-12-05T16:04:48.2102711+03:00",
+    "Assignee": {
+      "Id": 1,
+      "Name": "Алексей",
+      "Position": 1,
+      "Login": "aleksey1",
+      "Password": "pass1",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 4,
+    "Title": "Документация",
+    "CreationDate": "2024-11-30T16:04:48.2102713+03:00",
+    "Deadline": "2024-12-03T16:04:48.2102713+03:00",
+    "Assignee": {
+      "Id": 1,
+      "Name": "Алексей",
+      "Position": 1,
+      "Login": "aleksey1",
+      "Password": "pass1",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 5,
+    "Title": "Сбор требований",
+    "CreationDate": "2024-11-30T16:04:48.2102715+03:00",
+    "Deadline": "2024-12-02T16:04:48.2102715+03:00",
+    "Assignee": {
+      "Id": 3,
+      "Name": "Сергей",
+      "Position": 2,
+      "Login": "sergey1",
+      "Password": "pass3",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 6,
+    "Title": "Анализ данных",
+    "CreationDate": "2024-11-30T16:04:48.210272+03:00",
+    "Deadline": "2024-12-11T16:04:48.2102721+03:00",
+    "Assignee": {
+      "Id": 4,
+      "Name": "Ольга",
+      "Position": 3,
+      "Login": "olga1",
+      "Password": "pass4",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 7,
+    "Title": "Код-ревью",
+    "CreationDate": "2024-11-30T16:04:48.2102747+03:00",
+    "Deadline": "2024-12-01T16:04:48.2102747+03:00",
+    "Assignee": {
+      "Id": 5,
+      "Name": "Дмитрий",
+      "Position": 4,
+      "Login": "dmitry1",
+      "Password": "pass5",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 8,
+    "Title": "Подготовка презентации",
+    "CreationDate": "2024-11-30T16:04:48.2102749+03:00",
+    "Deadline": "2024-12-04T16:04:48.2102749+03:00",
+    "Assignee": {
+      "Id": 3,
+      "Name": "Сергей",
+      "Position": 2,
+      "Login": "sergey1",
+      "Password": "pass3",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 9,
+    "Title": "Проектирование базы данных",
+    "CreationDate": "2024-11-30T16:04:48.210275+03:00",
+    "Deadline": "2024-12-06T16:04:48.2102751+03:00",
+    "Assignee": {
+      "Id": 2,
+      "Name": "Мария",
+      "Position": 0,
+      "Login": "maria1",
+      "Password": "pass2",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 10,
+    "Title": "Реализация проекта",
+    "CreationDate": "2024-11-30T16:04:48.2102753+03:00",
+    "Deadline": "2024-12-08T16:04:48.2102767+03:00",
+    "Assignee": {
+      "Id": 4,
+      "Name": "Ольга",
+      "Position": 3,
+      "Login": "olga1",
+      "Password": "pass4",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 11,
+    "Title": "Создать подзадачу 1",
+    "CreationDate": "2024-11-30T16:04:48.2102768+03:00",
+    "Deadline": "2024-12-02T16:04:48.2102769+03:00",
+    "Assignee": {
+      "Id": 6,
+      "Name": "Елена",
+      "Position": 5,
+      "Login": "elena1",
+      "Password": "pass6",
+      "SupervisorId": 4
+    },
+    "Status": 0,
+    "Risks": 0,
+    "SubTasks": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "Id": 12,
+    "Title": "Создать подзадачу 2",
+    "CreationDate": "2024-11-30T16:04:48.210277+03:00",
+    "Deadline": "2024-12-03T16:04:48.210277+03:00",
+    "Assignee": {
+      "Id": 6,
+      "Name": "Елена",
+      "Position": 5,
+      "Login": "elena1",
+      "Password": "pass6",
+      "SupervisorId": 4
+    },
+    "Status": 0,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 13,
+    "Title": "Создать подзадачу 3",
+    "CreationDate": "2024-11-30T16:04:48.2102772+03:00",
+    "Deadline": "2024-12-05T16:04:48.2102772+03:00",
+    "Assignee": {
+      "Id": 7,
+      "Name": "Анна",
+      "Position": 1,
+      "Login": "anna1",
+      "Password": "pass7",
+      "SupervisorId": 1
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 14,
+    "Title": "Создать подзадачу 4",
+    "CreationDate": "2024-11-30T16:04:48.2102773+03:00",
+    "Deadline": "2024-12-06T16:04:48.2102773+03:00",
+    "Assignee": {
+      "Id": 8,
+      "Name": "Игорь",
+      "Position": 0,
+      "Login": "igor1",
+      "Password": "pass8",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 15,
+    "Title": "Создать основную задачу",
+    "CreationDate": "2024-11-30T16:04:48.2102775+03:00",
+    "Deadline": "2024-12-09T16:04:48.2102775+03:00",
+    "Assignee": {
+      "Id": 9,
+      "Name": "Светлана",
+      "Position": 2,
+      "Login": "svetlana1",
+      "Password": "pass9",
+      "SupervisorId": 3
+    },
+    "Status": 0,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 16,
+    "Title": "Задача 16",
+    "CreationDate": "2024-11-28T16:04:48.2103171+03:00",
+    "Deadline": "2024-12-11T16:04:48.2103171+03:00",
+    "Assignee": {
+      "Id": 6,
+      "Name": "Елена",
+      "Position": 5,
+      "Login": "elena1",
+      "Password": "pass6",
+      "SupervisorId": 4
+    },
+    "Status": 2,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 17,
+    "Title": "Задача 17",
+    "CreationDate": "2024-11-28T16:04:48.2103496+03:00",
+    "Deadline": "2024-12-08T16:04:48.2103496+03:00",
+    "Assignee": {
+      "Id": 14,
+      "Name": "Полина",
+      "Position": 2,
+      "Login": "polina1",
+      "Password": "pass14",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 18,
+    "Title": "Задача 18",
+    "CreationDate": "2024-11-25T16:04:48.2103511+03:00",
+    "Deadline": "2024-11-30T16:04:48.2103511+03:00",
+    "Assignee": {
+      "Id": 9,
+      "Name": "Светлана",
+      "Position": 2,
+      "Login": "svetlana1",
+      "Password": "pass9",
+      "SupervisorId": 3
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 19,
+    "Title": "Задача 19",
+    "CreationDate": "2024-11-27T16:04:48.2103519+03:00",
+    "Deadline": "2024-12-13T16:04:48.2103519+03:00",
+    "Assignee": {
+      "Id": 2,
+      "Name": "Мария",
+      "Position": 0,
+      "Login": "maria1",
+      "Password": "pass2",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 20,
+    "Title": "Задача 20",
+    "CreationDate": "2024-11-27T16:04:48.2103524+03:00",
+    "Deadline": "2024-11-30T16:04:48.2103524+03:00",
+    "Assignee": {
+      "Id": 6,
+      "Name": "Елена",
+      "Position": 5,
+      "Login": "elena1",
+      "Password": "pass6",
+      "SupervisorId": 4
+    },
+    "Status": 1,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 21,
+    "Title": "Задача 21",
+    "CreationDate": "2024-11-30T16:04:48.210353+03:00",
+    "Deadline": "2024-12-07T16:04:48.210353+03:00",
+    "Assignee": {
+      "Id": 13,
+      "Name": "Ярослав",
+      "Position": 0,
+      "Login": "yaroslav1",
+      "Password": "pass13",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": [
+      22,
+      23,
+      24
+    ]
+  },
+  {
+    "Id": 22,
+    "Title": "Задача 22",
+    "CreationDate": "2024-11-28T16:04:48.2103535+03:00",
+    "Deadline": "2024-12-11T16:04:48.2103535+03:00",
+    "Assignee": {
+      "Id": 1,
+      "Name": "Алексей",
+      "Position": 1,
+      "Login": "aleksey1",
+      "Password": "pass1",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 0,
+    "SubTasks": [
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 23,
+    "Title": "Задача 23",
+    "CreationDate": "2024-11-28T16:04:48.2103542+03:00",
+    "Deadline": "2024-12-11T16:04:48.2103542+03:00",
+    "Assignee": {
+      "Id": 7,
+      "Name": "Анна",
+      "Position": 1,
+      "Login": "anna1",
+      "Password": "pass7",
+      "SupervisorId": 1
+    },
+    "Status": 2,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 24,
+    "Title": "Задача 24",
+    "CreationDate": "2024-11-27T16:04:48.2103547+03:00",
+    "Deadline": "2024-12-13T16:04:48.2103547+03:00",
+    "Assignee": {
+      "Id": 1,
+      "Name": "Алексей",
+      "Position": 1,
+      "Login": "aleksey1",
+      "Password": "pass1",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 25,
+    "Title": "Задача 25",
+    "CreationDate": "2024-11-28T16:04:48.2103552+03:00",
+    "Deadline": "2024-12-10T16:04:48.2103552+03:00",
+    "Assignee": {
+      "Id": 5,
+      "Name": "Дмитрий",
+      "Position": 4,
+      "Login": "dmitry1",
+      "Password": "pass5",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 26,
+    "Title": "Задача 26",
+    "CreationDate": "2024-11-25T16:04:48.2103558+03:00",
+    "Deadline": "2024-11-27T16:04:48.2103558+03:00",
+    "Assignee": {
+      "Id": 5,
+      "Name": "Дмитрий",
+      "Position": 4,
+      "Login": "dmitry1",
+      "Password": "pass5",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 27,
+    "Title": "Задача 27",
+    "CreationDate": "2024-11-27T16:04:48.2103565+03:00",
+    "Deadline": "2024-12-12T16:04:48.2103565+03:00",
+    "Assignee": {
+      "Id": 3,
+      "Name": "Сергей",
+      "Position": 2,
+      "Login": "sergey1",
+      "Password": "pass3",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 28,
+    "Title": "Задача 28",
+    "CreationDate": "2024-11-27T16:04:48.2103626+03:00",
+    "Deadline": "2024-11-28T16:04:48.2103626+03:00",
+    "Assignee": {
+      "Id": 4,
+      "Name": "Ольга",
+      "Position": 3,
+      "Login": "olga1",
+      "Password": "pass4",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 29,
+    "Title": "Задача 29",
+    "CreationDate": "2024-11-27T16:04:48.2103632+03:00",
+    "Deadline": "2024-12-16T16:04:48.2103632+03:00",
+    "Assignee": {
+      "Id": 3,
+      "Name": "Сергей",
+      "Position": 2,
+      "Login": "sergey1",
+      "Password": "pass3",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 30,
+    "Title": "Задача 30",
+    "CreationDate": "2024-11-28T16:04:48.2103638+03:00",
+    "Deadline": "2024-11-30T16:04:48.2103638+03:00",
+    "Assignee": {
+      "Id": 9,
+      "Name": "Светлана",
+      "Position": 2,
+      "Login": "svetlana1",
+      "Password": "pass9",
+      "SupervisorId": 3
+    },
+    "Status": 1,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 31,
+    "Title": "Задача 31",
+    "CreationDate": "2024-11-27T16:04:48.2103644+03:00",
+    "Deadline": "2024-11-30T16:04:48.2103644+03:00",
+    "Assignee": {
+      "Id": 9,
+      "Name": "Светлана",
+      "Position": 2,
+      "Login": "svetlana1",
+      "Password": "pass9",
+      "SupervisorId": 3
+    },
+    "Status": 2,
+    "Risks": 2,
+    "SubTasks": [
+      32,
+      33,
+      34
+    ]
+  },
+  {
+    "Id": 32,
+    "Title": "Задача 32",
+    "CreationDate": "2024-11-30T16:04:48.2103649+03:00",
+    "Deadline": "2024-12-01T16:04:48.2103649+03:00",
+    "Assignee": {
+      "Id": 7,
+      "Name": "Анна",
+      "Position": 1,
+      "Login": "anna1",
+      "Password": "pass7",
+      "SupervisorId": 1
+    },
+    "Status": 2,
+    "Risks": 2,
+    "SubTasks": [
+      35,
+      36,
+      37
+    ]
+  },
+  {
+    "Id": 33,
+    "Title": "Задача 33",
+    "CreationDate": "2024-11-25T16:04:48.2103655+03:00",
+    "Deadline": "2024-12-05T16:04:48.2103655+03:00",
+    "Assignee": {
+      "Id": 8,
+      "Name": "Игорь",
+      "Position": 0,
+      "Login": "igor1",
+      "Password": "pass8",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 34,
+    "Title": "Задача 34",
+    "CreationDate": "2024-11-26T16:04:48.2103661+03:00",
+    "Deadline": "2024-11-30T16:04:48.2103661+03:00",
+    "Assignee": {
+      "Id": 15,
+      "Name": "Татьяна",
+      "Position": 5,
+      "Login": "tatiana1",
+      "Password": "pass15",
+      "SupervisorId": null
+    },
+    "Status": 0,
+    "Risks": 3,
+    "SubTasks": []
+  },
+  {
+    "Id": 35,
+    "Title": "Задача 35",
+    "CreationDate": "2024-11-30T16:04:48.2103668+03:00",
+    "Deadline": "2024-12-09T16:04:48.2103668+03:00",
+    "Assignee": {
+      "Id": 14,
+      "Name": "Полина",
+      "Position": 2,
+      "Login": "polina1",
+      "Password": "pass14",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 36,
+    "Title": "Задача 36",
+    "CreationDate": "2024-11-25T16:04:48.2103673+03:00",
+    "Deadline": "2024-12-11T16:04:48.2103673+03:00",
+    "Assignee": {
+      "Id": 13,
+      "Name": "Ярослав",
+      "Position": 0,
+      "Login": "yaroslav1",
+      "Password": "pass13",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 37,
+    "Title": "Задача 37",
+    "CreationDate": "2024-11-30T16:04:48.2103678+03:00",
+    "Deadline": "2024-12-07T16:04:48.2103678+03:00",
+    "Assignee": {
+      "Id": 2,
+      "Name": "Мария",
+      "Position": 0,
+      "Login": "maria1",
+      "Password": "pass2",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 38,
+    "Title": "Задача 38",
+    "CreationDate": "2024-11-29T16:04:48.2103683+03:00",
+    "Deadline": "2024-12-16T16:04:48.2103683+03:00",
+    "Assignee": {
+      "Id": 9,
+      "Name": "Светлана",
+      "Position": 2,
+      "Login": "svetlana1",
+      "Password": "pass9",
+      "SupervisorId": 3
+    },
+    "Status": 0,
+    "Risks": 0,
+    "SubTasks": []
+  },
+  {
+    "Id": 39,
+    "Title": "Задача 39",
+    "CreationDate": "2024-11-28T16:04:48.210369+03:00",
+    "Deadline": "2024-12-11T16:04:48.210369+03:00",
+    "Assignee": {
+      "Id": 8,
+      "Name": "Игорь",
+      "Position": 0,
+      "Login": "igor1",
+      "Password": "pass8",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 40,
+    "Title": "Задача 40",
+    "CreationDate": "2024-11-25T16:04:48.2103695+03:00",
+    "Deadline": "2024-12-09T16:04:48.2103695+03:00",
+    "Assignee": {
+      "Id": 13,
+      "Name": "Ярослав",
+      "Position": 0,
+      "Login": "yaroslav1",
+      "Password": "pass13",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 41,
+    "Title": "Задача 41",
+    "CreationDate": "2024-11-25T16:04:48.2103733+03:00",
+    "Deadline": "2024-12-03T16:04:48.2103733+03:00",
+    "Assignee": {
+      "Id": 11,
+      "Name": "Ксения",
+      "Position": 4,
+      "Login": "ksenia1",
+      "Password": "pass11",
+      "SupervisorId": 5
+    },
+    "Status": 1,
+    "Risks": 2,
+    "SubTasks": [
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "Id": 42,
+    "Title": "Задача 42",
+    "CreationDate": "2024-11-25T16:04:48.2103739+03:00",
+    "Deadline": "2024-11-26T16:04:48.2103739+03:00",
+    "Assignee": {
+      "Id": 10,
+      "Name": "Матвей",
+      "Position": 3,
+      "Login": "matvey1",
+      "Password": "pass10",
+      "SupervisorId": null
+    },
+    "Status": 1,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 43,
+    "Title": "Задача 43",
+    "CreationDate": "2024-11-25T16:04:48.2103747+03:00",
+    "Deadline": "2024-12-11T16:04:48.2103747+03:00",
+    "Assignee": {
+      "Id": 7,
+      "Name": "Анна",
+      "Position": 1,
+      "Login": "anna1",
+      "Password": "pass7",
+      "SupervisorId": 1
+    },
+    "Status": 3,
+    "Risks": 1,
+    "SubTasks": []
+  },
+  {
+    "Id": 44,
+    "Title": "Задача 44",
+    "CreationDate": "2024-11-27T16:04:48.2103753+03:00",
+    "Deadline": "2024-12-06T16:04:48.2103753+03:00",
+    "Assignee": {
+      "Id": 3,
+      "Name": "Сергей",
+      "Position": 2,
+      "Login": "sergey1",
+      "Password": "pass3",
+      "SupervisorId": null
+    },
+    "Status": 2,
+    "Risks": 2,
+    "SubTasks": []
+  },
+  {
+    "Id": 45,
+    "Title": "Задача 45",
+    "CreationDate": "2024-11-28T16:04:48.2103758+03:00",
+    "Deadline": "2024-12-06T16:04:48.2103758+03:00",
+    "Assignee": {
+      "Id": 10,
+      "Name": "Матвей",
+      "Position": 3,
+      "Login": "matvey1",
+      "Password": "pass10",
+      "SupervisorId": null
+    },
+    "Status": 3,
+    "Risks": 0,
+    "SubTasks": []
+  }
+]

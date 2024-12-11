@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "Name": "Алексей",
+    "Position": 1,
+    "Login": "aleksey1",
+    "Password": "pass1",
+    "SupervisorId": null
+  },
+  {
+    "Id": 2,
+    "Name": "Мария",
+    "Position": 0,
+    "Login": "maria1",
+    "Password": "pass2",
+    "SupervisorId": null
+  },
+  {
+    "Id": 3,
+    "Name": "Сергей",
+    "Position": 2,
+    "Login": "sergey1",
+    "Password": "pass3",
+    "SupervisorId": null
+  },
+  {
+    "Id": 4,
+    "Name": "Ольга",
+    "Position": 3,
+    "Login": "olga1",
+    "Password": "pass4",
+    "SupervisorId": null
+  },
+  {
+    "Id": 5,
+    "Name": "Дмитрий",
+    "Position": 4,
+    "Login": "dmitry1",
+    "Password": "pass5",
+    "SupervisorId": null
+  },
+  {
+    "Id": 6,
+    "Name": "Елена",
+    "Position": 5,
+    "Login": "elena1",
+    "Password": "pass6",
+    "SupervisorId": 4
+  },
+  {
+    "Id": 7,
+    "Name": "Анна",
+    "Position": 1,
+    "Login": "anna1",
+    "Password": "pass7",
+    "SupervisorId": 1
+  },
+  {
+    "Id": 8,
+    "Name": "Игорь",
+    "Position": 0,
+    "Login": "igor1",
+    "Password": "pass8",
+    "SupervisorId": null
+  },
+  {
+    "Id": 9,
+    "Name": "Светлана",
+    "Position": 2,
+    "Login": "svetlana1",
+    "Password": "pass9",
+    "SupervisorId": 3
+  },
+  {
+    "Id": 10,
+    "Name": "Матвей",
+    "Position": 3,
+    "Login": "matvey1",
+    "Password": "pass10",
+    "SupervisorId": null
+  },
+  {
+    "Id": 11,
+    "Name": "Ксения",
+    "Position": 4,
+    "Login": "ksenia1",
+    "Password": "pass11",
+    "SupervisorId": 5
+  },
+  {
+    "Id": 12,
+    "Name": "Степан",
+    "Position": 1,
+    "Login": "stepan1",
+    "Password": "pass12",
+    "SupervisorId": null
+  },
+  {
+    "Id": 13,
+    "Name": "Ярослав",
+    "Position": 0,
+    "Login": "yaroslav1",
+    "Password": "pass13",
+    "SupervisorId": null
+  },
+  {
+    "Id": 14,
+    "Name": "Полина",
+    "Position": 2,
+    "Login": "polina1",
+    "Password": "pass14",
+    "SupervisorId": null
+  },
+  {
+    "Id": 15,
+    "Name": "Татьяна",
+    "Position": 5,
+    "Login": "tatiana1",
+    "Password": "pass15",
+    "SupervisorId": null
+  }
+]
