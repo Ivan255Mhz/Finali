@@ -8,23 +8,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        const string jsonStaff = "People.txt";
-        const string jsonTask = "Tasks.txt";
-
         
-        if (!File.Exists(jsonStaff) || !File.Exists(jsonTask))
-        {
-            Console.WriteLine("Файлы People.txt или Tasks.txt отсутствуют.");
-            return;
-        }
-
-        
-        var staffList = JsonDeserializeWork<Staff>.Deserialize(jsonStaff);
-        var taskList = JsonDeserializeWork<Task>.Deserialize(jsonTask);
+        var staffList = JsonDeserializeWork<Staff>.Deserialize("People.txt");
+        var taskList = JsonDeserializeWork<Task>.Deserialize("Tasks.txt");
 
         if (staffList == null || taskList == null)
         {
-            Console.WriteLine("Ошибка: данные не были загружены.");
+            Console.WriteLine("Ошибка загрузки данных.");
             return;
         }
 
@@ -37,10 +27,10 @@ class Program
             }
         }
 
-        
+       
         foreach (var task in taskList)
         {
-            var assignee = staffList.FirstOrDefault(s => s.Id == task.Assignee.Id);
+            var assignee = staffList.FirstOrDefault(s => s.Id == task.Assignee?.Id);
             if (assignee != null)
             {
                 assignee.AssignedTasks.Add(task);
@@ -48,32 +38,43 @@ class Program
             }
         }
 
-        
-        foreach (var staff in staffList)
-        {
-            staff.Display();
-        }
+        var reportGenerator = new TaskReportGenerator(staffList, taskList);
+
+       
+        reportGenerator.ReportForEmployee(1, "ReportForEmployee.json");
+        reportGenerator.ReportTasksCreatedBetween(DateTimeOffset.Now.AddMonths(-1), DateTimeOffset.Now, "TasksCreated.json");
+        reportGenerator.ReportTasksByStatus(TaskStatus.InProgress, "TasksByStatus.json");
+        reportGenerator.ReportTasksByRisk(RiskLevel.Red, "TasksByRisk.json");
+        reportGenerator.ReportSubTasks(2, "SubTasks.json");
     }
 }
 
 public class JsonDeserializeWork<T>
 {
-    public static List<T> Deserialize(string json)
+    public static List<T> Deserialize(string fileName)
     {
-        if (!File.Exists(json))
+        try
         {
-            throw new FileNotFoundException($"Файл {json} не найден.");
+            if (!File.Exists(fileName))
+            {
+                throw new FileNotFoundException($"Файл {fileName} не найден.");
+            }
+
+            string jsonString = File.ReadAllText(fileName);
+            var deserializedList = JsonSerializer.Deserialize<List<T>>(jsonString);
+
+            if (deserializedList == null)
+            {
+                throw new InvalidOperationException($"Ошибка десериализации файла {fileName}");
+            }
+
+            return deserializedList;
         }
-
-        string jsonString = File.ReadAllText(json);
-        var deserializedList = JsonSerializer.Deserialize<List<T>>(jsonString);
-
-        if (deserializedList == null)
+        catch (Exception ex)
         {
-            throw new InvalidOperationException($"Ошибка десериализации файла {json}");
+            Console.WriteLine($"Ошибка: {ex.Message}");
+            return new List<T>();
         }
-
-        return deserializedList;
     }
 }
 
@@ -92,11 +93,6 @@ public class Staff
     [System.Text.Json.Serialization.JsonIgnore]
     public List<Task> AssignedTasks { get; set; } = new List<Task>();
 
-    private string GetSupervisorInfo()
-    {
-        return Supervisor == null ? "Нет начальника" : Supervisor.Name ?? "Имя начальника не указано";
-    }
-
     public void Display()
     {
         Console.WriteLine("Информация о сотруднике:");
@@ -105,7 +101,7 @@ public class Staff
         Console.WriteLine($"Должность: {Position}");
         Console.WriteLine($"Логин: {Login}");
         Console.WriteLine($"Длина пароля: {Password.Length}");
-        Console.WriteLine($"Начальник: {GetSupervisorInfo()}");
+        Console.WriteLine($"Начальник: {(Supervisor?.Name ?? "Нет начальника")}");
 
         if (AssignedTasks.Count > 0)
         {
@@ -130,7 +126,7 @@ public class Task
     public string Title { get; set; }
     public DateTimeOffset CreationDate { get; set; }
     public DateTimeOffset Deadline { get; set; }
-    public Staff Assignee { get; set; }
+    public Staff? Assignee { get; set; }
     public TaskStatus Status { get; set; }
     public RiskLevel Risks { get; set; }
     public List<int> SubTasks { get; set; } = new List<int>();
@@ -138,6 +134,120 @@ public class Task
     public bool IsOverdue()
     {
         return DateTimeOffset.Now > Deadline;
+    }
+}
+
+public class TaskReportGenerator
+{
+    private readonly List<Staff> _staffList;
+    private readonly List<Task> _taskList;
+
+    public TaskReportGenerator(List<Staff> staffList, List<Task> taskList)
+    {
+        _staffList = staffList;
+        _taskList = taskList;
+    }
+
+    private void SaveReportToFile<T>(T report, string fileName)
+    {
+        if (report == null || (report is IEnumerable<object> enumerable && !enumerable.Any()))
+        {
+            Console.WriteLine($"Отчет {fileName} пуст, сохранение пропущено.");
+            return;
+        }
+
+        var json = JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(fileName, json);
+        Console.WriteLine($"Отчет сохранен в файл: {fileName}");
+    }
+
+    public void ReportForEmployee(int employeeId, string fileName)
+    {
+        var staff = _staffList.FirstOrDefault(s => s.Id == employeeId);
+        if (staff == null)
+        {
+            Console.WriteLine("Сотрудник не найден.");
+            return;
+        }
+
+        var report = staff.AssignedTasks.Select(task => new
+        {
+            TaskTitle = task.Title,
+            Deadline = task.Deadline,
+            Risk = task.Risks,
+            Status = task.Status
+        }).ToList();
+
+        SaveReportToFile(report, fileName);
+    }
+
+    public void ReportTasksCreatedBetween(DateTimeOffset start, DateTimeOffset end, string fileName)
+    {
+        var report = _taskList
+            .Where(t => t.CreationDate >= start && t.CreationDate <= end)
+            .Select(task => new
+            {
+                TaskTitle = task.Title,
+                SubTasksCount = task.SubTasks.Count,
+                Status = task.Status
+            }).ToList();
+
+        SaveReportToFile(report, fileName);
+    }
+
+    public void ReportTasksByStatus(TaskStatus status, string fileName)
+    {
+        var report = _taskList
+            .Where(t => t.Status == status)
+            .Select(task => new
+            {
+                TaskTitle = task.Title,
+                AssigneeName = task.Assignee?.Name ?? "Не назначено",
+                Deadline = task.Deadline
+            }).ToList();
+
+        SaveReportToFile(report, fileName);
+    }
+
+    public void ReportTasksByRisk(RiskLevel risk, string fileName)
+    {
+        var report = _taskList
+            .Where(t => t.Risks == risk)
+            .Select(task => new
+            {
+                TaskTitle = task.Title,
+                SubTasksCount = task.SubTasks.Count
+            }).ToList();
+
+        SaveReportToFile(report, fileName);
+    }
+
+    public void ReportSubTasks(int taskId, string fileName)
+    {
+        var task = _taskList.FirstOrDefault(t => t.Id == taskId);
+        if (task == null)
+        {
+            Console.WriteLine("Задача не найдена.");
+            return;
+        }
+
+        if (!task.SubTasks.Any())
+        {
+            Console.WriteLine("У задачи нет подзадач.");
+            return;
+        }
+
+        var report = task.SubTasks
+            .Select(subTaskId => _taskList.FirstOrDefault(t => t.Id == subTaskId))
+            .Where(subTask => subTask != null)
+            .Select(subTask => new
+            {
+                TaskTitle = subTask.Title,
+                Deadline = subTask.Deadline,
+                Status = subTask.Status
+            }).ToList();
+
+        SaveReportToFile(report, fileName);
     }
 }
 
